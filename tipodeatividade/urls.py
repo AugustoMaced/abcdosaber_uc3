@@ -5,4 +5,5 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('lista/', views.listar, name='listar'),
     path('bomdia/', views.show_mensagem, name='bomdia'),
+    path('<int:ta_codigo>/', views.detalhe_tipodeatividade, name='tipodeatividade')
 ]
