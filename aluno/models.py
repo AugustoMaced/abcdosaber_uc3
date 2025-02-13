@@ -9,9 +9,9 @@ class Aluno(models.Model):
                                  help_text='Código do Aluno')
     nome = models.CharField(max_length=70, null=False, 
                             help_text='Informe o nome do aluno')
-    dataInicial = models.DateField(null=False, 
+    dataInicial = models.DateField(null=False,blank=False, 
                                    help_text='Data inicial do Aluno')
-    dataFinal = models.DateField(null=False, 
+    dataFinal = models.DateField(null=True,blank=True, 
                                  help_text='Data Final do Aluno')
 
     def __str__(self):
