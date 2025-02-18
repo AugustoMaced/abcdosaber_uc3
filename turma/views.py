@@ -1,8 +1,12 @@
-# Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
+from turma.models import Turma
 
-def informacao(request):
-    return HttpResponse("Não tô muito afim")
+# Create your views here.
+def home(request):
+    return render(request, 'escola.html')
+
+def listar(request):
+    lista_turma = Turma.objects.all()
+    return HttpResponse(lista_turma)
